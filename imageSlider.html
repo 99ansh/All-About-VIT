@@ -1,0 +1,64 @@
+<html>
+<head>
+    <style>
+        #previousButton {
+            top: 1%;
+            position: fixed;
+        }
+
+        #nextButton {
+            top: 1%;
+            left: 87%;
+            position: absolute;
+        }
+
+        button {
+            height: auto;
+            width: auto;
+            border-radius: 20px;
+            font-size: 20;
+            font-weight: bold;
+        }
+
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img alt="------------------PLEASE CONNECT TO INTERNET" class="myImage" src="https://i1.wp.com/blog.raoiit.com/wp-content/uploads/2017/11/vit_logo_approved-821562994-1510314862879.jpg?resize=533%2C574&ssl=1"
+        style="width:100%;height:100%;">
+    <img alt="------------------PLEASE CONNECT TO INTERNET" class="myImage" src="http://blog.colive.in/wp-content/uploads/2018/04/wdwf.jpg"
+        style="width:100%;height:100%;">
+    <img alt="------------------PLEASE CONNECT TO INTERNET" class="myImage" src="http://admissiondelhi.in/wp-content/uploads/2017/04/VIT-UNIVERSITY-VELLORE.jpg"
+        style="width:100%;height:100%;">
+    <img alt="------------------PLEASE CONNECT TO INTERNET" class="myImage" src="https://img.collegepravesh.com/2015/12/VIT-Chennai.jpg"
+        style="width:100%;height:100%;">
+    <img alt="------------------PLEASE CONNECT TO INTERNET" class="myImage" src="https://pbs.twimg.com/media/CwT3rvWUUAAKL0V.jpg"
+        style="width:100%;height:100%;">
+    <div id="previousButton"><img src="./button_previous_100860/Button_Previous_Icon_48.png" onclick="plusDivs(-1)" style="margin-top:10px"></div>
+    <div id="nextButton"><img src="./button_next_100857/Button_Next_Icon_48.png" onclick="plusDivs(1)" style="margin-top:10px"></div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("myImage");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
